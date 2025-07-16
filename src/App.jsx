@@ -1,6 +1,6 @@
 import './App.css'
 import Home from "./Pages/Home/Home.jsx";
-import MyList from "./Pages/Mylist/MyList.jsx";
+import MyList from "./Pages/MyList/MyList.jsx";
 import Navbar from "./componenets/Navbar/Navbar.jsx";
 import {Route, Routes} from "react-router";
 import {HOME, MY_LIST} from "./constans/path.jsx"
