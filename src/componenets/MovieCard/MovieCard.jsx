@@ -1,5 +1,5 @@
 import React from 'react'
-import './movieCard.css'
+import './MovieCard.css'
 import { FaStar } from "react-icons/fa6";
 import { Link } from 'react-router';
 import {API_IMG} from "../../constans/api.jsx";
