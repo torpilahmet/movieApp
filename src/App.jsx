@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Home from "./Pages/Home/Home.jsx";
 import MyList from "./Pages/Mylist/MyList.jsx";
@@ -13,7 +12,7 @@ function App() {
           <Routes>
               <Route path={HOME} element={<Home/>}/>
               <Route path={MY_LIST} element={<MyList/>}/>
-              <Route path="/mylist/:id" element={<MyList/>}/>
+              {/*<Route path="/mylist/:id" element={<MyList/>}/>*/}
           </Routes>
   </div>
 
