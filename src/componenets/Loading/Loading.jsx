@@ -1,8 +1,9 @@
-import React from 'react'
+import {ClockLoader} from 'react-spinners';
 
-const Loading = () => {
-    return (
-        <div>Loading</div>
-    )
-}
-export default Loading
+const Loading = () => (
+    <div className="loading-component">
+        <ClockLoader color="#ffcc00" size={150} />
+    </div>
+);
+
+export default Loading;

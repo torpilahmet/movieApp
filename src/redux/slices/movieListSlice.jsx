@@ -4,6 +4,8 @@ import {API_MOVIE_LIST, API_KEY} from "../../constans/api.jsx";
 
 const initialState = {
     movieList: [],
+    status: "idle",
+    error: null,
 }
 
 export const getMovieList = createAsyncThunk('getMovieList', async () =>{
@@ -17,8 +19,16 @@ export const movieListSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: (builder) => {
+        builder.addCase(getMovieList.pending, (state, action) => {
+            state.status = action.meta.requestStatus
+        })
         builder.addCase(getMovieList.fulfilled, (state, action) => {
+            state.status = action.meta.requestStatus
             state.movieList = action.payload;
+        })
+        builder.addCase(getMovieList.rejected, (state, action) => {
+            state.status = action.meta.requestStatus
+            state.error = action.error.message;
         })
     }
 })
